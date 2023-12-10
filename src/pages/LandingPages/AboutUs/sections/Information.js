@@ -23,6 +23,12 @@ import MKBox from "components/MKBox";
 // Material Kit 2 React examples
 import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
+import SliderScreen from "examples/Cards/BlogCards/EmiCalculator/SliderScreen";
+import loanicon from "../../../../assets/images/loan.png"
+import instant from "../../../../assets/images/instant.png"
+import fastMoney from "../../../../assets/images/cd.png"
+import low from "../../../../assets/images/low.png"
+import fast from "../../../../assets/images/fast.png"
 
 function Information() {
   return (
@@ -34,8 +40,9 @@ function Information() {
               <Grid item xs={12} md={6}>
                 <MKBox mb={5}>
                   <DefaultInfoCard
-                    icon="public"
-                    title="Fully integrated"
+                    icon={instant}
+                    color="success"
+                    title="Personalized Loan Offers "
                     description="We get insulted by others, lose trust for those We get back freezes"
                   />
                 </MKBox>
@@ -43,8 +50,8 @@ function Information() {
               <Grid item xs={12} md={6}>
                 <MKBox mb={5}>
                   <DefaultInfoCard
-                    icon="payments"
-                    title="Payments functionality"
+                    icon={fast}
+                    title="Fast Disbursal"
                     description="We get insulted by others, lose trust for those We get back freezes"
                   />
                 </MKBox>
@@ -52,8 +59,8 @@ function Information() {
               <Grid item xs={12} md={6}>
                 <MKBox mb={{ xs: 5, md: 0 }}>
                   <DefaultInfoCard
-                    icon="apps"
-                    title="Prebuilt components"
+                    icon={low}
+                    title="Low EMIs & Intrest Rate"
                     description="We get insulted by others, lose trust for those We get back freezes"
                   />
                 </MKBox>
@@ -61,24 +68,24 @@ function Information() {
               <Grid item xs={12} md={6}>
                 <MKBox mb={{ xs: 5, md: 0 }}>
                   <DefaultInfoCard
-                    icon="3p"
-                    title="Improved platform"
+                    icon={fastMoney}
+                    title="Easy to Apply"
                     description="We get insulted by others, lose trust for those We get back freezes"
                   />
                 </MKBox>
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}>
-            <CenteredBlogCard
+          <Grid item xs={12} lg={5} sx={{ ml: "auto", mt: { xs: 1, lg: 0 } }}>
+            <SliderScreen
               image="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-              title="Get insights on Search"
+              title="Get instant free cibil score"
               description="Website visitors today demand a frictionless user expericence — especially when using search. Because of the hight standards."
               action={{
                 type: "internal",
                 route: "pages/company/about-us",
                 color: "info",
-                label: "find out more",
+                label: "Check Yours",
               }}
             />
           </Grid>

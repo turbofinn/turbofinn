@@ -26,19 +26,7 @@ import MKTypography from "components/MKTypography";
 function DefaultInfoCard({ color, icon, title, description, direction, small }) {
   return (
     <MKBox lineHeight={1} p={direction === "center" ? 2 : 0} textAlign={direction}>
-      {typeof icon === "string" ? (
-        <MKTypography
-          display="block"
-          variant={direction === "center" ? "h2" : "h3"}
-          color={color}
-          textGradient
-        >
-          {" "}
-          <Icon>{icon}</Icon>{" "}
-        </MKTypography>
-      ) : (
-        icon
-      )}
+<img width="64" height="64" src={icon} alt="money-pound"/>
       <MKTypography
         display="block"
         variant="5"

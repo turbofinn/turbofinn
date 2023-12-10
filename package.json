@@ -1,5 +1,5 @@
 {
-  "name": "Turbofinn",
+  "name": "turbofinn",
   "version": "2.1.0",
   "private": true,
   "author": "Creative Tim",
@@ -7,7 +7,7 @@
   "description": "React version of Material Kit 2 by Creative Tim",
   "homepage": "https://turbofinn.github.io/turbofinn",
   "bugs": {
-    "url": ""
+    "url": "https://turbofinn.github.io/turbofinn"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,9 @@
     "@testing-library/user-event": "14.4.3",
     "chroma-js": "2.4.2",
     "flatpickr": "4.6.13",
+    "highcharts": "^11.2.0",
+    "highcharts-more": "^0.1.7",
+    "highcharts-react-official": "^3.2.1",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-copy-to-clipboard": "5.1.0",
@@ -46,7 +49,6 @@
     "deploy": "gh-pages -d build",
     "prettify": "prettier --write ."
   },
- 
   "browserslist": {
     "production": [
       ">0.2%",

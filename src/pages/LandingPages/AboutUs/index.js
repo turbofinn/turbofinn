@@ -39,8 +39,13 @@ import footerRoutes from "footer.routes";
 
 // Images
 import bgImage from "assets/images/bg5.jpeg";
+import TFSlider from "components/TFSlider/TFSlider";
+import { useState } from "react";
 
 function AboutUs() {
+  const [loanAmount, setloanAmount] = useState(0);
+  const [intrestRate, setintrestRate] = useState(0);
+  const [tenure, settenure] = useState(0);
   return (
     <>
       <DefaultNavbar
@@ -129,9 +134,17 @@ function AboutUs() {
         }}
       >
         <Information />
+        <Newsletter />
+        <TFSlider 
+            loanAmount={loanAmount}
+            setloanAmount={setloanAmount}
+            intrestRate={intrestRate}
+            setintrestRate={setintrestRate}
+            tenure={tenure}
+            settenure={settenure}
+        />
         <Team />
         <Featuring />
-        <Newsletter />
       </Card>
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />

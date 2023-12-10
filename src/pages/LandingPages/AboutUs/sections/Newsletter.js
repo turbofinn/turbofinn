@@ -32,6 +32,12 @@ function Newsletter() {
     <MKBox component="section" pt={6} my={6}>
       <Container>
         <Grid container alignItems="center">
+        
+          <Grid item xs={12} md={5} sx={{ ml: "auto" }}>
+            <MKBox position="relative">
+              <MKBox component="img" src={macbook} alt="macbook" width="100%" />
+            </MKBox>
+          </Grid>
           <Grid item sx={12} md={6} sx={{ ml: { xs: 0, lg: 3 }, mb: { xs: 12, md: 0 } }}>
             <MKTypography variant="h4">Be the first to see the news</MKTypography>
             <MKTypography variant="body2" color="text" mb={3}>
@@ -48,11 +54,6 @@ function Newsletter() {
                 </MKButton>
               </Grid>
             </Grid>
-          </Grid>
-          <Grid item xs={12} md={5} sx={{ ml: "auto" }}>
-            <MKBox position="relative">
-              <MKBox component="img" src={macbook} alt="macbook" width="100%" />
-            </MKBox>
           </Grid>
         </Grid>
       </Container>
