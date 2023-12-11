@@ -40,12 +40,23 @@ import footerRoutes from "footer.routes";
 // Images
 import bgImage from "assets/images/bg5.jpeg";
 import TFSlider from "components/TFSlider/TFSlider";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function AboutUs() {
   const [loanAmount, setloanAmount] = useState(0);
   const [intrestRate, setintrestRate] = useState(0);
   const [tenure, settenure] = useState(0);
+
+
+
+  useEffect(() => {
+    const interestPerYear = (loanAmount * intrestRate) / 100;
+    const monthlyInterest = interestPerYear / 12;
+    const monthlyPayment = monthlyInterest + loanAmount / tenure;
+    const totalInterestCost = monthlyInterest * tenure;
+    const totalRepayment = monthlyPayment * tenure;
+
+  }, [loanAmount,intrestRate,tenure]);
   return (
     <>
       <DefaultNavbar

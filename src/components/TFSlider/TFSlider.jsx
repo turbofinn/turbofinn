@@ -26,6 +26,9 @@ const PrettoSlider = styled(Slider)({
     color: '#52af77',
     height: 10,
     width: "100%",
+    markLabel: {
+        fontSize: '4px', // Adjust the font size as needed
+    },
     '& .MuiSlider-track': {
         border: 'none',
         height: 8
@@ -157,16 +160,16 @@ export default function TFSlider(props) {
     console.log("slider Value", value)
     return (
         <>
-            <Grid container spacing={1}>
-                <Grid item lg={6} xl={6} md={6} xs={12} sm={12} p={5}>
+            <Grid container spacing={1} mt={10}>
+                <Grid item lg={6} xl={6} md={6} xs={12} sm={12} p={5} >
                     <Barchart />
                 </Grid>
                 <Grid item lg={6} xl={6} md={6} xs={12} sm={12} p={5}>
 
                     <Box sx={{ width: "100%", height: "20%" }}>
                         <Box sx={{ m: 3 }} />
-                        <Typography gutterBottom>{"Loan Amount"}
-                            <span style={{ fontSize: "1rem", marginLeft: "2%" }}>: {CommonUtils.toIndianCurrency(props.loanAmount)}</span>
+                        <Typography fontSize={"0.8rem"} gutterBottom>{"Loan Amount"}
+                            <span style={{ fontSize: "0.8rem", marginLeft: "2%" }}>: {CommonUtils.toIndianCurrency(props.loanAmount)}</span>
                         </Typography>
                         <PrettoSlider
                             valueLabelDisplay="off"
@@ -182,8 +185,8 @@ export default function TFSlider(props) {
                     </Box>
                     <Box sx={{ width: "100%", height: "20%" }}>
                         <Box sx={{ m: 3 }} />
-                        <Typography gutterBottom>{"Intrest Rate"}
-                            <span style={{ fontSize: "1rem", marginLeft: "2%" }}>: {props.intrestRate}%</span>
+                        <Typography gutterBottom fontSize={"0.8rem"} >{"Intrest Rate"}
+                            <span style={{ fontSize: "0.8rem", marginLeft: "2%" }}>: {props.intrestRate}%</span>
                         </Typography>
                         <PrettoSlider
                             valueLabelDisplay="off"
@@ -199,16 +202,11 @@ export default function TFSlider(props) {
                     </Box>
                     <Box sx={{ width: "100%", height: "20%" }}>
                         <Box sx={{ m: 3 }} />
-                        <Grid container  >
-                            <Grid item sx={10} sm={10} md={10} lg={10} xl={10}>
-                                <Typography gutterBottom >{"Loan Tenure"}
-                                    <span style={{ fontSize: "1rem", marginLeft: "2%" }}>: {props.tenure}</span>
-                                </Typography>
-                            </Grid>
-                            <Grid item sx={2} sm={2} md={2} lg={2} xl={2}>
-                                <FormControlLabel control={<Switch defaultChecked color="success" />} label="Yr" color="secondary" />
-                            </Grid>
-                        </Grid>
+
+                        <Typography gutterBottom fontSize={"0.8rem"} >{"Loan Tenure"}
+                            <span style={{ fontSize: "0.8rem", marginLeft: "2%" }}>: {props.tenure} months</span>
+                        </Typography>
+
 
                         <PrettoSlider
                             valueLabelDisplay="off"
