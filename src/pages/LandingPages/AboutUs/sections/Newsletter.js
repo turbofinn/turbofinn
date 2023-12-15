@@ -26,34 +26,96 @@ import MKButton from "components/MKButton";
 
 // Images
 import macbook from "assets/images/macbook.png";
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import Divider from '@mui/material/Divider';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import React from "react";
+import { Icon, Stack, Typography } from "@mui/material";
+import c1 from "../../../../assets/images/c1.jpg"
 
 function Newsletter() {
   return (
-    <MKBox component="section" pt={6} my={6}>
+    <MKBox component="section" pt={0} my={6}>
       <Container>
         <Grid container alignItems="center">
         
-          <Grid item xs={12} md={5} sx={{ ml: "auto" }}>
+          <Grid item xs={12} md={5} >
             <MKBox position="relative">
-              <MKBox component="img" src={macbook} alt="macbook" width="100%" />
+              <MKBox component="img" src={c1} alt="macbook" width="100%" />
             </MKBox>
           </Grid>
-          <Grid item sx={12} md={6} sx={{ ml: { xs: 0, lg: 3 }, mb: { xs: 12, md: 0 } }}>
-            <MKTypography variant="h4">Be the first to see the news</MKTypography>
-            <MKTypography variant="body2" color="text" mb={3}>
-              Your company may not be in the software business, but eventually, a software company
-              will be in your business.
+          <Grid item xs={12} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
+          <MKTypography variant="h3" my={1}>
+              How it works ?
             </MKTypography>
-            <Grid container spacing={1}>
-              <Grid item xs={8}>
-                <MKInput type="email" label="Email Here..." fullWidth />
-              </Grid>
-              <Grid item xs={4}>
-                <MKButton variant="gradient" color="info" sx={{ height: "100%" }}>
-                  Subscribe
-                </MKButton>
-              </Grid>
-            </Grid>
+            <Stack>
+              <MKBox display="flex" alignItems="center" p={2}>
+                <MKBox
+                  width="3rem"
+                  height="3rem"
+                  variant="gradient"
+                  bgColor="info"
+                  color="white"
+                  coloredShadow="info"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  borderRadius="xl"
+                >
+                  <Icon fontSize="small">mediation</Icon>
+                </MKBox>
+                <MKTypography variant="body2" color="text" pl={2}>
+                  It becomes harder for us to give others a hand.
+                  <br />
+                  We get our heart broken by people we love.
+                </MKTypography>
+              </MKBox>
+              <MKBox display="flex" alignItems="center" p={2}>
+                <MKBox
+                  width="3rem"
+                  height="3rem"
+                  variant="gradient"
+                  bgColor="info"
+                  color="white"
+                  coloredShadow="info"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  borderRadius="xl"
+                >
+                  <Icon fontSize="small">settings_overscan</Icon>
+                </MKBox>
+                <MKTypography variant="body2" color="text" pl={2}>
+                  As we live, our hearts turn colder.
+                  <br />
+                  Cause pain is what we go through as we become older.
+                </MKTypography>
+              </MKBox>
+              <MKBox display="flex" alignItems="center" p={2}>
+                <MKBox
+                  width="3rem"
+                  height="3rem"
+                  variant="gradient"
+                  bgColor="info"
+                  color="white"
+                  coloredShadow="info"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  borderRadius="xl"
+                >
+                  <Icon fontSize="small">token</Icon>
+                </MKBox>
+                <MKTypography variant="body2" color="text" pl={2}>
+                  When we lose family over time.
+                  <br />
+                  What else could rust the heart more over time? Blackgold.
+                </MKTypography>
+              </MKBox>
+            </Stack>
           </Grid>
         </Grid>
       </Container>

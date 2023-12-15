@@ -32,18 +32,17 @@ import fast from "../../../../assets/images/fast.png"
 
 function Information() {
   return (
-    <MKBox component="section" py={12}>
+    <MKBox component="section" py={6}>
       <Container>
         <Grid container spacing={3} alignItems="center">
           <Grid item xs={12} lg={6}>
             <Grid container justifyContent="flex-start">
               <Grid item xs={12} md={6}>
-                <MKBox mb={5}>
+              <MKBox mb={{ xs: 5, md: 0 }}>
                   <DefaultInfoCard
-                    icon={instant}
-                    color="success"
-                    title="Personalized Loan Offers "
-                    description="We get insulted by others, lose trust for those We get back freezes"
+                    icon={fastMoney}
+                    title="Easy to Apply"
+                    description="Applying for a loan with Turbofinn AI is quick and straightforward. Say goodbye to endless paperwork and long waiting times. Our user-friendly online application ensures a seamless experience"
                   />
                 </MKBox>
               </Grid>
@@ -52,7 +51,7 @@ function Information() {
                   <DefaultInfoCard
                     icon={fast}
                     title="Fast Disbursal"
-                    description="We get insulted by others, lose trust for those We get back freezes"
+                    description="We understand the importance of timely financial assistance. Our advanced technology allows us to process applications swiftly, getting funds into your account when you need them the most."
                   />
                 </MKBox>
               </Grid>
@@ -61,16 +60,18 @@ function Information() {
                   <DefaultInfoCard
                     icon={low}
                     title="Low EMIs & Intrest Rate"
-                    description="We get insulted by others, lose trust for those We get back freezes"
+                    description="Enjoy competitive and transparent interest rates tailored to suit your financial needs. At TurboFinn AI, we believe in fair and affordable lending to help you achieve your goals without breaking the bank"
                   />
                 </MKBox>
               </Grid>
               <Grid item xs={12} md={6}>
-                <MKBox mb={{ xs: 5, md: 0 }}>
+              
+                <MKBox mb={5}>
                   <DefaultInfoCard
-                    icon={fastMoney}
-                    title="Easy to Apply"
-                    description="We get insulted by others, lose trust for those We get back freezes"
+                    icon={instant}
+                    color="success"
+                    title="Personalized Loan Offers "
+                    description="Unlike traditional one-size-fits-all loan offerings, We provides personalized loan based on borrower's credit history, income, employment status, and financial goals."
                   />
                 </MKBox>
               </Grid>
@@ -80,7 +81,7 @@ function Information() {
             <SliderScreen
               image="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
               title="Get instant free cibil score"
-              description="Website visitors today demand a frictionless user expericence — especially when using search. Because of the hight standards."
+              description="Obtain a copy of your credit report and check your credit score. A higher credit score generally improves your chances of getting approved for a loan and may also affect the interest rate you receive."
               action={{
                 type: "internal",
                 route: "pages/company/about-us",

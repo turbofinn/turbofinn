@@ -41,6 +41,8 @@ import footerRoutes from "footer.routes";
 import bgImage from "assets/images/bg5.jpeg";
 import TFSlider from "components/TFSlider/TFSlider";
 import { useEffect, useState } from "react";
+import LoanCalculator from "components/TFSlider/LoanCalculator";
+import Steps from "./sections/Steps";
 
 function AboutUs() {
   const [loanAmount, setloanAmount] = useState(0);
@@ -145,16 +147,10 @@ function AboutUs() {
         }}
       >
         <Information />
+        <Steps/>
+        <LoanCalculator/>
         <Newsletter />
-        <TFSlider 
-            loanAmount={loanAmount}
-            setloanAmount={setloanAmount}
-            intrestRate={intrestRate}
-            setintrestRate={setintrestRate}
-            tenure={tenure}
-            settenure={settenure}
-        />
-        <Team />
+        {/* <Team /> */}
         <Featuring />
       </Card>
       <MKBox pt={6} px={1} mt={6}>
