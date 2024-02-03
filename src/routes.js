@@ -1,7 +1,8 @@
 import Icon from "@mui/material/Icon";
 
 import GitHubIcon from "@mui/icons-material/GitHub";
-
+import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 // Pages
 import AboutUs from "layouts/pages/landing-pages/about-us";
 import ContactUs from "layouts/pages/landing-pages/contact-us";
@@ -30,7 +31,7 @@ import Typography from "layouts/sections/elements/typography";
 
 const routes = [
   {
-    name: "pages",
+    name: "Products",
     icon: <Icon>dashboard</Icon>,
     columns: 1,
     rowsPerColumn: 2,
@@ -39,8 +40,8 @@ const routes = [
         name: "landing pages",
         collapse: [
           {
-            name: "about us",
-            route: "/pages/landing-pages/about-us",
+            name: "Home",
+            route: "home",
             component: <AboutUs />,
           },
           {
@@ -68,7 +69,7 @@ const routes = [
     ],
   },
   {
-    name: "sections",
+    name: "Services",
     icon: <Icon>view_day</Icon>,
     collapse: [
       {
@@ -199,8 +200,8 @@ const routes = [
     ],
   },
   {
-    name: "docs",
-    icon: <Icon>article</Icon>,
+    name: "Leadership",
+    icon: <PeopleAltIcon/>,
     collapse: [
       {
         name: "getting started",
@@ -225,8 +226,8 @@ const routes = [
     ],
   },
   {
-    name: "github",
-    icon: <GitHubIcon />,
+    name: "Contact us",
+    icon: <PermPhoneMsgIcon />,
     href: "https://www.github.com/creativetimofficial/material-kit-react",
   },
 ];

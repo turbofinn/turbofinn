@@ -106,113 +106,99 @@ const LoanCalculator = () => {
     };
 
     return (
-        <Grid container spacing={2} justifyContent="center" my={10}>
+        <Grid container spacing={0} justifyContent="center">
             {/* For desktop and mobile view */}
-            <Grid item xs={12} md={6}>
-                <Card
-                    elevation={3} // Slight shadow
-                    style={{
-                        backgroundColor: '#fff', // White background color
-                        color: '#344767', // Text color
-                        fontFamily: '"Roboto","Helvetica","Arial",sans-serif', // Font family
-                        padding: '20px',
-                        margin: '20px',
-                        borderRadius: '4px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                    }}
-                >
-                    <h4 style={{ margin: '0 0 20px' }}>Loan Calculator</h4>
-                    <div style={{ width: '100%' }}>
-                        <Typography gutterBottom style={{ margin: '10px 0' }}>
-                            Loan Amount: {formatCurrency(loanAmount)}
-                        </Typography>
-                        <PrettoSlider
-                            valueLabelDisplay="off"
-                            aria-label="pretto slider"
-                            defaultValue={200000}
-                            step={1000}
-                            min={0}
-                            // value={value}
-                            max={1000000}
-                            onChange={(_, value) => setLoanAmount(value)}
-                        />
-                    </div>
-                    <div style={{ width: '100%' }}>
-                        <Typography gutterBottom style={{ margin: '10px 0' }}>
-                            Interest Rate: {interestRate}%
-                        </Typography>
-                        <PrettoSlider
-                            valueLabelDisplay="off"
-                            aria-label="pretto slider"
-                            defaultValue={20}
-                            step={0.1}
-                            min={0}
-                            // value={value}
-                            max={30}
-                            onChange={(_, value) => setInterestRate(value)}
-                        />
-                    </div>
-                    <div style={{ width: '100%' }}>
-                        <Typography gutterBottom style={{ margin: '10px 0' }}>
-                            Loan Tenure: {loanTenure} Months
-                        </Typography>
-                        <PrettoSlider
-                            valueLabelDisplay="off"
-                            aria-label="pretto slider"
-                            defaultValue={200}
-                            min={0}
-                            // value={value}
-                            max={360}
-                            onChange={(_, value) => setLoanTenure(value)}
-                        />
-                    </div>
-                </Card>
-            </Grid>
-            <Grid item xs={12} md={6}>
-                <Card
-                    // Slight shadow
-                    style={{
-                        backgroundColor: '#fff', // White background color
-                        color: '#344767', // Text color
-                        fontFamily: '"Roboto","Helvetica","Arial",sans-serif', // Font family
-                        padding: '20px',
-                        margin: '20px',
-                        borderRadius: '4px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                    }}
-                >
-                    <div style={{ width: '100%' }}>
-                        <Barchart totalInterest={totalInterest} totalPrincipal={principalAmount} />
-                        <Card >
-                            <TableContainer component={Paper}>
-                                <Table size="small" aria-label="a dense table">
-                                    <TableHead>
-                                        <TableRow>
-                                            <TableCell align="center" style={{ fontSize: "0.9rem", fontWeight: "600" }}>Monthly EMI</TableCell>
-                                            <TableCell align="center" style={{ fontSize: "0.9rem", fontWeight: "600" }}>Total Payment</TableCell>
-                                            <TableCell align="center" style={{ fontSize: "0.9rem", fontWeight: "600" }}> Principal Amount</TableCell>
-                                            <TableCell align="center" style={{ fontSize: "0.9rem", fontWeight: "600" }}>Total Interest</TableCell>
-                                        </TableRow>
-                                        <TableRow>
-                                            <TableCell align="center" style={{ fontSize: "0.8rem", fontWeight: "500" }}>{formatCurrency(monthlyEMI)}</TableCell>
-                                            <TableCell align="center" style={{ fontSize: "0.8rem", fontWeight: "500" }}>{formatCurrency(totalPayment)}</TableCell>
-                                            <TableCell align="center" style={{ fontSize: "0.8rem", fontWeight: "500" }}>{formatCurrency(principalAmount)}</TableCell>
-                                            <TableCell align="center" style={{ fontSize: "0.8rem", fontWeight: "500" }}>{formatCurrency(totalInterest)}</TableCell>
-                                        </TableRow>
-                                    </TableHead>
-                                </Table>
-                            </TableContainer>
 
-                        </Card>
-                    </div>
+            <Grid container xs={12} md={12} display={"flex"}>
+                <Grid item xs={12} md={6}>
+                    <Barchart totalInterest={totalInterest} totalPrincipal={principalAmount} />
+
+                </Grid>
+                <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={12} p={4} mt={6}>
+
+
+                        <div style={{ width: '100%' }}>
+                            <Typography gutterBottom style={{ margin: '10px 0', fontSize: "0.8rem", color: "black" }}>
+                                Loan Amount: {formatCurrency(loanAmount)}
+                            </Typography>
+                            <PrettoSlider
+                                valueLabelDisplay="off"
+                                aria-label="pretto slider"
+                                defaultValue={200000}
+                                step={1000}
+                                min={0}
+                                // value={value}
+                                max={1000000}
+                                onChange={(_, value) => setLoanAmount(value)}
+                            />
+                        </div>
+                        <div style={{ width: '100%' }}>
+                            <Typography gutterBottom style={{ margin: '10px 0', fontSize: "0.8rem", color: "black" }}>
+                                Interest Rate: {interestRate}%
+                            </Typography>
+                            <PrettoSlider
+                                valueLabelDisplay="off"
+                                aria-label="pretto slider"
+                                defaultValue={20}
+                                step={0.1}
+                                min={0}
+                                // value={value}
+                                max={30}
+                                onChange={(_, value) => setInterestRate(value)}
+                            />
+                        </div>
+                        <div style={{ width: '100%' }}>
+                            <Typography gutterBottom style={{ margin: '10px 0', fontSize: "0.8rem", color: "black" }}>
+                                Loan Tenure: {loanTenure} Months
+                            </Typography>
+                            <PrettoSlider
+                                valueLabelDisplay="off"
+                                aria-label="pretto slider"
+                                defaultValue={200}
+                                min={0}
+                                // value={value}
+                                max={360}
+                                onChange={(_, value) => setLoanTenure(value)}
+                            />
+                        </div>
+
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+            <Grid item xs={12} md={12} >
+                <Card >
+
+                    <TableContainer width={"100%"} >
+                        <Table size="small" >
+                            <TableRow>
+                                <TableCell align="center" style={{ fontSize: "0.9rem", fontWeight: "600", width: "25%" }}>Monthly EMI</TableCell>
+                                <TableCell align="center" style={{ fontSize: "0.9rem", fontWeight: "600", width: "25%" }}>Total Payment</TableCell>
+                                <TableCell align="center" style={{ fontSize: "0.9rem", fontWeight: "600", width: "25%" }}> Principal Amount</TableCell>
+                                <TableCell align="center" style={{ fontSize: "0.9rem", fontWeight: "600", width: "25%" }}>Total Interest</TableCell>
+                            </TableRow>
+
+
+                            <TableRow>
+                                <TableCell align="center" style={{ fontSize: "0.8rem", fontWeight: "500", width: "25%" }}>{formatCurrency(monthlyEMI)}</TableCell>
+                                <TableCell align="center" style={{ fontSize: "0.8rem", fontWeight: "500", width: "25%" }}>{formatCurrency(totalPayment)}</TableCell>
+                                <TableCell align="center" style={{ fontSize: "0.8rem", fontWeight: "500", width: "25%" }}>{formatCurrency(principalAmount)}</TableCell>
+                                <TableCell align="center" style={{ fontSize: "0.8rem", fontWeight: "500", width: "25%" }}>{formatCurrency(totalInterest)}</TableCell>
+                            </TableRow>
+                        </Table>
+                    </TableContainer>
+
                 </Card>
             </Grid>
+
+
+
+
+
+
+
         </Grid>
     );
 };

@@ -20,7 +20,7 @@ export default [
   {
     image: `${imagesPrefix}/about-us.jpg`,
     name: "About Us Page",
-    route: "/pages/landing-pages/about-us",
+    route: "/home",
   },
   {
     image: `${imagesPrefix}/contact.jpg`,

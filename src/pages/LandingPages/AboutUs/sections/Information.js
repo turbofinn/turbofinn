@@ -32,7 +32,7 @@ import fast from "../../../../assets/images/fast.png"
 
 function Information() {
   return (
-    <MKBox component="section" py={6} mt={10}>
+    <MKBox component="section" py={3} mt={5}>
       <Container>
         <Grid container spacing={3} alignItems="center">
           <Grid item xs={12} lg={6}>
@@ -85,7 +85,7 @@ function Information() {
               action={{
                 type: "internal",
                 route: "pages/company/about-us",
-                color: "info",
+                color: "success",
                 label: "Check Yours",
               }}
             />

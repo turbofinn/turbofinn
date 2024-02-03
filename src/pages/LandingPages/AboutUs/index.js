@@ -65,8 +65,8 @@ function AboutUs() {
         routes={routes}
         action={{
           type: "external",
-          route: "xyz.com",
-          label: " create account",
+          route: "/pages/authentication/sign-in",
+          label: " Apply Now",
           color: "default",
         }}
         transparent
@@ -146,12 +146,12 @@ function AboutUs() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-          <Steps/>
-        <Information />
       
-        <LoanCalculator/>
+        <Information />
+        <Steps/>
+        {/* <LoanCalculator/> */}
         <Newsletter />
-        {/* <Team /> */}
+        <Team />
         <Featuring />
       </Card>
       <MKBox pt={6} px={1} mt={6}>
