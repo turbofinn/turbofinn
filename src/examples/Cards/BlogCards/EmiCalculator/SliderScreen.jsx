@@ -31,50 +31,60 @@ import MKButton from "components/MKButton";
 import TFSlider from "../../../../components/TFSlider/TFSlider"
 import { useState } from "react";
 import SpeedometerChart from "components/Highcharts/Speedometer";
+import { Button } from "@mui/material";
+import GeneralDialog from "components/DialogBox/GeneralDialog";
 
 function SliderScreen({ image, title, description, action }) {
+    const [openDialog, setopenDialog] = useState(false);
 
     return (
-        <Card>
-            <MKBox position="relative" borderRadius="lg" mx={2} mt={-3}>
-                <SpeedometerChart
+        <>
+            {
+                <GeneralDialog
+                    title={"test"}
+                    open={openDialog}
+                    setopen={setopenDialog}
                 />
+            }
+            <Card>
+                <MKBox position="relative" borderRadius="lg" mx={2} mt={-3}>
+                    <SpeedometerChart
+                    />
 
-            </MKBox>
-            <MKBox p={3} mt={-1} textAlign="center">
-                <MKTypography display="inline" variant="h5" textTransform="capitalize" fontWeight="regular">
-                    {title}
-                </MKTypography>
-                <MKBox mt={1} mb={3}>
-                    <MKTypography variant="body2" component="p" color="text">
-                        {description}
-                    </MKTypography>
                 </MKBox>
-                {action.type === "external" ? (
-                    <MKButton
-                        component={MuiLink}
-                        href={action.route}
-                        target="_blank"
-                        rel="noreferrer"
-                        variant="gradient"
-                        size="small"
-                        color={action.color ? action.color : "dark"}
-                    >
-                        {action.label}
-                    </MKButton>
-                ) : (
-                    <MKButton
-                        component={Link}
-                        to={action.route}
-                        variant="gradient"
-                        size="small"
-                        color={action.color ? action.color : "dark"}
-                    >
-                        {action.label}
-                    </MKButton>
-                )}
-            </MKBox>
-        </Card>
+                <MKBox p={3} mt={-1} textAlign="center">
+                    <MKTypography display="inline" variant="h5" textTransform="capitalize" fontWeight="regular">
+                        {title}
+                    </MKTypography>
+                    <MKBox mt={1} mb={3}>
+                        <MKTypography variant="body2" component="p" color="text">
+                            {description}
+                        </MKTypography>
+                    </MKBox>
+                    {action.type === "external" ? (
+                        <Button
+                            onClick={() => { setopenDialog(true) }}
+                            rel="noreferrer"
+                            variant="gradient"
+                            size="small"
+                            color={action.color ? action.color : "dark"}
+                        >
+                            {action.label}
+                        </Button>
+                    ) : (
+                        <MKButton
+                            component={Link}
+                            to={action.route}
+                            variant="gradient"
+                            size="small"
+                            color={action.color ? action.color : "dark"}
+                        >
+                            {action.label}
+                        </MKButton>
+                    )}
+                </MKBox>
+            </Card>
+        </>
     );
 }
 

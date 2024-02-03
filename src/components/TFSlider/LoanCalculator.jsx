@@ -6,6 +6,7 @@ import Card from '@mui/material/Card';
 import Barchart from "../../components/Highcharts/BarChart"
 import { Box, CardContent, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import cd from "../../assets/images/test.png"
 
 
 
@@ -19,7 +20,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 
 const PrettoSlider = styled(Slider)({
-    color: '#52af77',
+    color: '#228b22',
     height: 10,
     width: "100%",
     markLabel: {
@@ -27,7 +28,8 @@ const PrettoSlider = styled(Slider)({
     },
     '& .MuiSlider-track': {
         border: 'none',
-        height: 8
+        height: 8,
+        background: "#228b22"
     },
     '& .MuiSlider-marks': {
         fontSize: "0.8rem"
@@ -39,6 +41,7 @@ const PrettoSlider = styled(Slider)({
         border: '2px solid currentColor',
         '&:focus, &:hover, &.Mui-active, &.Mui-focusVisible': {
             boxShadow: 'inherit',
+
         },
         '&:before': {
             display: 'none',
@@ -52,7 +55,7 @@ const PrettoSlider = styled(Slider)({
         width: 32,
         height: 32,
         borderRadius: '50% 50% 50% 0',
-        backgroundColor: '#52af77',
+        backgroundColor: '#228b22"',
         transformOrigin: 'bottom left',
         transform: 'translate(50%, -100%) rotate(-45deg) scale(0)',
         '&:before': { display: 'none' },

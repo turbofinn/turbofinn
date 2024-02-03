@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Highcharts from 'highcharts';
+import cd from "../../assets/images/test.png"
 
 // Load the exporting module for exporting charts
 import Exporting from 'highcharts/modules/exporting';
@@ -10,7 +11,7 @@ const LoanChart = (props) => {
         // Build the chart
         Highcharts.chart('loan-chart-container', {
             chart: {
-                plotBackgroundColor: null,
+                // plotBackgroundColor: "#228b22",
                 plotBorderWidth: null,
                 plotShadow: false,
                 type: 'pie',
@@ -35,7 +36,7 @@ const LoanChart = (props) => {
                     dataLabels: {
                         enabled: true,
                         format:
-                            '<span style="font-size: 1.2em"><b>{point.name}</b></span><br>' +
+                            '<span style="font-size: 1.2em; background:"#228b22"><b>{point.name}</b></span><br>' +
                             '<span style="opacity: 0.6">{point.percentage:.1f} %</span>',
                         connectorColor: 'rgba(128,128,128,0.5)',
                     },

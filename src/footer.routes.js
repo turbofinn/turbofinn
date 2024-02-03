@@ -10,12 +10,14 @@ import MKTypography from "components/MKTypography";
 // Images
 import logoCT from "assets/images/logo-ct-dark.png";
 
+import tf from "./assets/images/TurbofinnLogo2.png"
+
 const date = new Date().getFullYear();
 
 export default {
   brand: {
-    name: "Material Kit 2",
-    image: logoCT,
+    name: "Turbofinn AI",
+    image: tf,
     route: "/",
   },
   socials: [
@@ -74,16 +76,16 @@ export default {
   ],
   copyright: (
     <MKTypography variant="button" fontWeight="regular">
-      All rights reserved. Copyright &copy; {date} Material Kit by{" "}
+      All rights reserved. Copyright &copy;&nbsp;
       <MKTypography
         component="a"
-        href="https://www.creative-tim.com"
+        href="https://www.turbofinn.com"
         target="_blank"
         rel="noreferrer"
         variant="button"
         fontWeight="regular"
       >
-        Creative Tim
+        TurboFinn AI
       </MKTypography>
       .
     </MKTypography>

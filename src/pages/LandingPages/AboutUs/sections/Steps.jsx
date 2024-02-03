@@ -18,25 +18,31 @@ import Avatar from '@mui/material/Avatar';
 import React from "react";
 import { Icon, Stack, Typography } from "@mui/material";
 import c1 from "../../../../assets/images/c2.png"
+import offer from "../../../../assets/images/offer.png"
+import eligblity from "../../../../assets/images/eligblity.png"
+import approval from "../../../../assets/images/approval.png"
 
 function Steps() {
     return (
         <MKBox component="section" pt={0} my={0}>
             <Container>
+
+                <MKTypography variant="h1" color="forestgreen" sx={{ textAlign: "center", fontWeight: "700", color: "forestgreen" }} mt={8} mb={1}>
+                    Get Instant Personal Loans
+                </MKTypography>
                 <Grid container alignItems="center">
 
-
-                    <Grid item xs={12} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 0 } }}>
-                        <MKTypography variant="h3" my={1}>
-                            How it works ?
+                    <Grid item xs={12} lg={6} sx={{ ml: { xs: -2, lg: "auto" }, mt: { xs: 6, lg: 2 } }}>
+                        <MKTypography variant="h3" my={1} sx={{ color: "forestgreen" }}>
+                            Simple 3-Step Process
                         </MKTypography>
                         <Stack>
-                            <MKBox display="flex" alignItems="center" p={2}>
+                            <MKBox display="flex" alignItems="center" p={2} mt={2}>
                                 <MKBox
                                     width="3rem"
                                     height="3rem"
                                     variant="gradient"
-                                    bgColor="info"
+                                    bgColor="white"
                                     color="white"
                                     coloredShadow="info"
                                     display="flex"
@@ -44,12 +50,37 @@ function Steps() {
                                     justifyContent="center"
                                     borderRadius="xl"
                                 >
-                                    <Icon fontSize="small">mediation</Icon>
+                                    <img src={offer} alt="" style={{ height: "2.5rem" }} />
                                 </MKBox>
-                                <MKTypography variant="body2" color="text" pl={2}>
-                                    It becomes harder for us to give others a hand.
+                                <MKTypography variant="body2" color="text" pl={2} sx={{ fontWeight: "700" }}>
+                                    Compare & Choose the Best Offer
                                     <br />
-                                    We get our heart broken by people we love.
+                                    <MKTypography variant="body2" color="text" pl={0}>
+                                        Attractive rates starting from 10.25% pa and EMIs.
+                                    </MKTypography>
+                                </MKTypography>
+
+                            </MKBox>
+                            <MKBox display="flex" alignItems="center" p={2}>
+                                <MKBox
+                                    width="3rem"
+                                    height="3rem"
+                                    variant="gradient"
+                                    bgColor="white"
+                                    color="white"
+                                    coloredShadow="info"
+                                    display="flex"
+                                    alignItems="center"
+                                    justifyContent="center"
+                                    borderRadius="xl"
+                                >
+                                    <img src={eligblity} alt="" style={{ height: "2.5rem" }} />
+                                </MKBox>
+                                <MKTypography variant="body2" color="text" pl={2} sx={{ fontWeight: "700" }}>
+                                    Check Loan Amount Eligibility
+                                    <MKTypography variant="body2" color="text" pl={0}>
+                                        Eligibility criteria for an Instant Loan is Age, Salary & Residence.
+                                    </MKTypography>
                                 </MKTypography>
                             </MKBox>
                             <MKBox display="flex" alignItems="center" p={2}>
@@ -57,7 +88,7 @@ function Steps() {
                                     width="3rem"
                                     height="3rem"
                                     variant="gradient"
-                                    bgColor="info"
+                                    bgColor="white"
                                     color="white"
                                     coloredShadow="info"
                                     display="flex"
@@ -65,41 +96,21 @@ function Steps() {
                                     justifyContent="center"
                                     borderRadius="xl"
                                 >
-                                    <Icon fontSize="small">settings_overscan</Icon>
+                                    <img src={approval} alt="" style={{ height: "2.5rem" }} />
                                 </MKBox>
-                                <MKTypography variant="body2" color="text" pl={2}>
-                                    As we live, our hearts turn colder.
-                                    <br />
-                                    Cause pain is what we go through as we become older.
-                                </MKTypography>
-                            </MKBox>
-                            <MKBox display="flex" alignItems="center" p={2}>
-                                <MKBox
-                                    width="3rem"
-                                    height="3rem"
-                                    variant="gradient"
-                                    bgColor="info"
-                                    color="white"
-                                    coloredShadow="info"
-                                    display="flex"
-                                    alignItems="center"
-                                    justifyContent="center"
-                                    borderRadius="xl"
-                                >
-                                    <Icon fontSize="small">token</Icon>
-                                </MKBox>
-                                <MKTypography variant="body2" color="text" pl={2}>
-                                    When we lose family over time.
-                                    <br />
-                                    What else could rust the heart more over time? Blackgold.
+                                <MKTypography variant="body2" color="text" pl={2} sx={{ fontWeight: "700" }}>
+                                    Know your Approval Chances
+                                    <MKTypography variant="body2" color="text" pl={0}>
+                                        Approval time as low as 1 minute.
+                                    </MKTypography>
                                 </MKTypography>
                             </MKBox>
                         </Stack>
                     </Grid>
 
-                    <Grid item xs={12} md={5} >
+                    <Grid item xs={12} md={5} lg={6}>
                         <MKBox position="relative">
-                            <MKBox component="img" src={c1} alt="macbook" width="100%" />
+                            <MKBox component="img" src={c1} alt="macbook" width="80%" />
                         </MKBox>
                     </Grid>
                 </Grid>

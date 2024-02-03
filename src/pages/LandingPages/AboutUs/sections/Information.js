@@ -32,7 +32,7 @@ import fast from "../../../../assets/images/fast.png"
 
 function Information() {
   return (
-    <MKBox component="section" py={6}>
+    <MKBox component="section" py={6} mt={10}>
       <Container>
         <Grid container spacing={3} alignItems="center">
           <Grid item xs={12} lg={6}>

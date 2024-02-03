@@ -146,8 +146,9 @@ function AboutUs() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
+          <Steps/>
         <Information />
-        <Steps/>
+      
         <LoanCalculator/>
         <Newsletter />
         {/* <Team /> */}
